@@ -4,8 +4,18 @@
 // There it will be possible to have nine modes
 // OFF, ON, BLINK, FLASH 1,2,3 and the flashing inverse
 //
-// See below how to use it!!!
+//           _                     _ _     _ _     _ _
+//            !                   !   !   !   !   !   !
+//            !_ _ _ _ _ _ _ _ _ _!   !_ _!   !_ _!   !_ _
+// Operation              0         5   4   3   2   1 
 // 
+// MaxOperationStep = 0 + 5
+// Time laps @0 = trep - (5 x ton)
+// Time laps @5, @4, @3, @2, @1 = ton 
+//
+//
+// See below how to use it!!!
+//  
 // #define GPIO XX
 //
 // struct LedParam LedRed, *PLedRed=&LedRed;
@@ -19,8 +29,10 @@
 // void loop()
 // {
 //      GPIOController(PLedRed, GPIO);
-//  }
+// }
 //
+
+#pragma once
 
 #include <Arduino.h>
 
